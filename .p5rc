@@ -2,6 +2,7 @@
   "name": "codingtrain",
   "projects": [
     "perlinnoise",
-    "vectors"
+    "vectors",
+    "pixelarray"
   ]
 }
