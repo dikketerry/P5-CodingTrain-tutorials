@@ -19,7 +19,7 @@ function draw() {
 
 		for (var x = 0; x < width; x++) {
 			var index = (x + y * width) * 4;
-			noiseDetail(4, 0.4); // param1 represents octaves over which Perlin noise is calculated. param2 represents the falloff amount that each octave is contributing to the noise. default values are 4 octaves with 0.5 falloff (octave contributes 50% of its predecessing octave; 1st octave initiates with 50%)
+			noiseDetail(8, 0.4); // param1 represents octaves over which Perlin noise is calculated. param2 represents the falloff amount that each octave is contributing to the noise. default values are 4 octaves with 0.5 falloff (octave contributes 50% of its predecessing octave; 1st octave initiates with 50%)
 			var noizze = noise(xOffset, yOffset) * 255;
 			
 			pixels[index+0] = noizze;
