@@ -1,34 +1,28 @@
-class Walker {
-  constructor() {
-    this.x = width/2;
-    this.y = height/2;
-    this.noiseTimeX = 0;
-    this.noiseTimeY = 999;
-    this.incr = 0.02;
-    this.xStep = 0;
-    this.yStep = 0;
-  }
+// define literal object
+let circle = {
+	x: 0,
+	y: 200,
+	diameter: 50
+};
 
-  step() {
-    let noiseValX = noise(noiseTimeX);
-    let noiseValY = noise(noiseTimeY);
-    this.noiseTimeX = noiseTimeX + incr;
-    this.noiseTimeY = noiseTimeY + incr;
+// let x = 0;
+// let y = 200;
+// let diameter = 50;
+let r = 218;
+let g = 160;
+let b = 221;
 
-    this.xStep = map(noiseValX, 0, 1, -9, 9);
-    this.yStep = map(noiseValY, 0, 1, -9, 9);
+function setup() {
+	createCanvas(600, 400);
+	colorMode(RGB, 255, 255, 255);
+}
 
-    x = x + xStep;
-    y = y + yStep;
-    
-    x = constrain(x, 0, width-1);
-    y = constrain(y, 0, height-1);
-  }
+function draw() {
+	background(r, g, b);
 
-  render() {
-    stroke(0, 100, 100, 1);
-    strokeWeight(3);
-    ellipse(x, y, 3, 3);
-  }
-  
+	// ellipse
+	fill(250, 200, 200);	
+	ellipse(circle.x, circle.y, circle.diameter, circle.diameter);
+
+	circle.x = circle.x + 1;
 }
