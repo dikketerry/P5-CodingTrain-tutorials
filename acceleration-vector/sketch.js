@@ -9,6 +9,16 @@ function setup() {
 
 function draw() {
 	background(18); // dark grey
-	mover.show();
+
+	if (mouseIsPressed) {
+		let gravity = createVector(0, 0.1);
+		mover.applyForce(gravity);
+	}
+
+	// let gravity = createVector(0, 1);
+	// mover.applyForce(gravity);
+
 	mover.update();
+	mover.edges();
+	mover.show();
 }

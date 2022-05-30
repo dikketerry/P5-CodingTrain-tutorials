@@ -1,23 +1,31 @@
 class Mover {
   constructor(x, y) {
     this.pos = createVector(x, y);
-    // this.vel = createVector(1, -1);
-    this.vel = p5.Vector.random2D();
-    this.vel.mult(random(3));
+    this.vel = createVector(0, 0);
+    this.acc = createVector(0, 0);
 
+  }
+
+  applyForce(force) {
+    this.acc = force;
+  }
+
+  edges() {
+    if (this.pos.y >= height) {
+      this.pos.y = height;
+      this.vel.y *= -1;
+    }
   }
 
   // update position
   update() {
-
-    let mouse = createVector(mouseX, mouseY);
-    this.acc = p5.Vector.sub(mouse, this.pos); 
-    this.acc.setMag(1);
+    // let mouse = createVector(mouseX, mouseY);
+    // this.acc = p5.Vector.sub(mouse, this.pos); 
+    // this.acc.setMag(0.1);
 
     this.vel.add(this.acc);
-    this.vel.limit(5);
-    
     this.pos.add(this.vel);
+    this.acc.set(0, 0);
   }
 
   show() {
