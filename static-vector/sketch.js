@@ -6,11 +6,11 @@ function setup() {
 	
 	// pixelDensity(1); 
 	// colorMode(HSB, 360, 100, 100, 1);
-	// background(0, 0, 10, 1);
+	background(0, 0, 10, 1);
 }
 
 function draw() {
-	background(0, 0, 10);
+	// background(0, 0, 10);
 
 	let pos = createVector(200, 200);
 	let mouse = createVector(mouseX, mouseY);
