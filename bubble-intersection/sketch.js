@@ -2,10 +2,10 @@ let bubbles = [];
 let unicorn;
 
 function setup() {
-	createCanvas(600, 400);
+	createCanvas(400, 400);
 	colorMode(HSB, 360, 100, 100, 1);
 	
-	for (let i = 0; i < 900; i++) {
+	for (let i = 0; i < 500; i++) {
 		let x = random(width);
 		let y = random(height);
 		let r = random(3, 8);

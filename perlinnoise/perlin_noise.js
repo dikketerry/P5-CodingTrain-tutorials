@@ -2,7 +2,7 @@ var offset1 = 0;
 var offset2 = 10000;
 
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(400, 400);
 	colorMode(HSB, 360, 100, 100, 1);
 	background(0, 100, 10, 1);
 }
@@ -17,6 +17,6 @@ function draw() {
 	offset1 += 0.02;
 	offset2 += 0.02;
 
-	ellipse(x, y, 36, 36);
+	ellipse(x, y, 24, 24);
 
 }
